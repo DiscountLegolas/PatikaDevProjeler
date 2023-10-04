@@ -1,0 +1,39 @@
+
+Eldeki diziyi bir Binary Search Tree (BST) ağacına dönüştürmek için 2. adımda nasıl ilerlediğimizi detaylı açıklayayım:
+
+Verilen dizi: [7, 5, 1, 8, 3, 6, 0, 9, 4, 2]
+
+Adım 1 (Root belirleme):
+
+İlk olarak, dizinin ilk elemanı olan 7'yi kök düğüm (root) olarak belirleriz: Root = 7
+Adım (Diğer Elemanları Ekleme):
+
+Dizinin ikinci elemanı olan 5, kök düğümün solundaki bir alt düğüm olarak eklenir çünkü 5, 7'den küçüktür. Yani, 5, 7'nin solunda yer alır.
+Sıradaki eleman, yani 1, kök düğüm olan 7'den küçüktür, bu nedenle 1, 7'nin solundaki 5'in solunda yer alır.
+
+    7
+   /
+  5
+
+Sıradaki eleman, yani 1, kök düğüm olan 7'den küçüktür, bu nedenle 1, 7'nin solundaki 5'in solunda yer alır.
+    7
+   /
+  5
+ /
+1
+Şimdi 8'i ele alalım. 8, kök düğüm olan 7'den büyük olduğu için 7'nin sağına eklenir.
+    7
+   / \
+  5   8
+ / \
+1
+Sırayla 3, 6, 0, 9, 4 ve 2 elemanlarını ağaca ekleriz. Her elemanın eklenmesi sırasında, ağacın kökünden başlayarak uygun alt ağaca eklenir.
+    7
+   / \
+  5   8
+ / \   \
+1   6   9
+ \   \
+  3   0
+   \
+    2
